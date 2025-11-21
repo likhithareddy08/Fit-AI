@@ -15,7 +15,7 @@ AI Fitness Coach is a smart web application that provides AI-powered workout sug
 - Track user progress  
 - View workout history  
 - Analyze calorie intake and activity
-- 
+  
 
 ### 🎨 Modern UI/UX
 - Clean responsive interface  
