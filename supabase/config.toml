@@ -1,0 +1,22 @@
+project_id = "gtmbslgdtrcpymamdgdk"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+extra_search_path = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+[functions.ai-coach]
+verify_jwt = false
+
+[functions.analyze-nutrition]
+verify_jwt = false
