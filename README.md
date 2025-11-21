@@ -2,9 +2,7 @@
 
 ## 🏋️‍♂️ Project Overview
 AI Fitness Coach is a smart web application that provides AI-powered workout suggestions, diet recommendations, and fitness tracking features. It is built using modern web technologies including React, TypeScript, and TailwindCSS.  
-This project is developed as part of an academic assignment and is suitable for GitHub submission.
 
----
 
 ## 🚀 Features
 
@@ -16,31 +14,14 @@ This project is developed as part of an academic assignment and is suitable for 
 ### 📊 Interactive Dashboard
 - Track user progress  
 - View workout history  
-- Analyze calorie intake and activity  
-
-### 📸 Camera-Based Analysis
-- Real-time pose detection  
-- Movement monitoring  
-- Exercise form correction  
+- Analyze calorie intake and activity
+- 
 
 ### 🎨 Modern UI/UX
 - Clean responsive interface  
 - Built with React + TailwindCSS  
 - Smooth interactions with ShadCN components  
 
----
-
-## 🗂️ Tech Stack
-
-| Category | Technologies |
-|---------|--------------|
-| Frontend | React, TypeScript, Vite |
-| Styling | TailwindCSS, ShadCN UI |
-| AI/ML | TensorFlow.js / MediaPipe (if included) |
-| Build Tool | Vite |
-| Package Manager | npm / bun |
-
----
 
 ## 📁 Project Structure
 
