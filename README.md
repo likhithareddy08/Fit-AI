@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+# 📘 AI Fitness Coach
 
-## Project info
+## 🏋️‍♂️ Project Overview
+AI Fitness Coach is a smart web application that provides AI-powered workout suggestions, diet recommendations, and fitness tracking features. It is built using modern web technologies including React, TypeScript, and TailwindCSS.  
+This project is developed as part of an academic assignment and is suitable for GitHub submission.
 
-**URL**: https://lovable.dev/projects/12d8751e-0228-4e66-af9c-7b2aeac96f81
+---
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+### 🧠 AI-Powered Fitness Suggestions
+- Personalized workout recommendations  
+- Diet and calorie guidance  
+- Intelligent exercise planning  
 
-**Use Lovable**
+### 📊 Interactive Dashboard
+- Track user progress  
+- View workout history  
+- Analyze calorie intake and activity  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/12d8751e-0228-4e66-af9c-7b2aeac96f81) and start prompting.
+### 📸 Camera-Based Analysis
+- Real-time pose detection  
+- Movement monitoring  
+- Exercise form correction  
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🎨 Modern UI/UX
+- Clean responsive interface  
+- Built with React + TailwindCSS  
+- Smooth interactions with ShadCN components  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🗂️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Category | Technologies |
+|---------|--------------|
+| Frontend | React, TypeScript, Vite |
+| Styling | TailwindCSS, ShadCN UI |
+| AI/ML | TensorFlow.js / MediaPipe (if included) |
+| Build Tool | Vite |
+| Package Manager | npm / bun |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Project Structure
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```
+ai-fitness-coach-main/
+│
+├── public/
+│ └── (images, icons, static assets)
+│
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── utils/
+│ ├── App.tsx
+│ ├── main.tsx
+│ └── index.css
+│
+├── supabase/
+│ ├── config.toml
+│ ├── functions/
+│ │ ├── ai-coach/
+│ │ │ └── index.ts
+│ │ └── analyze-nutrition/
+│ │ └── index.ts
+│ └── migrations/
+│ ├── 20251121062044_.sql
+│ └── 20251121062118_.sql
+│
+├── .env
+├── .gitignore
+├── components.json
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.ts
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ⚙️ Setup Instructions
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/ai-fitness.git
+cd ai-fitness-coach-main
+```
+2️⃣ Install Dependencies
+```
+npm install
+or
+bun install
+```
+3️⃣ Configure Environment Variables
+Create a .env file in the root folder:
+
+```
+VITE_API_KEY=your_api_key_here
+```
+4️⃣ Run the Development Server
+```
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/12d8751e-0228-4e66-af9c-7b2aeac96f81) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+5️⃣ Create a Production Build
+```
+npm run build
+```
+6️⃣ Preview the Build
+```
+npm run preview
+```

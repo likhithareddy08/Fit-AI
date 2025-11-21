@@ -85,26 +85,42 @@ export default function Nutrition() {
   };
 
   const saveMeal = async () => {
-    if (!analysis || !user) return;
-
-    const { error } = await supabase.from("meals").insert({
-      user_id: user.id,
-      meal_name: mealDescription,
-      calories: analysis.calories,
-      protein: analysis.protein,
-      carbs: analysis.carbs,
-      fats: analysis.fat,
-    });
-
-    if (error) {
-      toast.error("Failed to save meal");
+    if (!analysis || !user) {
+      toast.error("Please analyze a meal first");
       return;
     }
 
-    toast.success("Meal saved!");
-    setMealDescription("");
-    setAnalysis(null);
-    fetchTodayMeals();
+    try {
+      // Convert values to integers as required by the database
+      const mealData = {
+        user_id: user.id,
+        meal_name: mealDescription.trim() || "Meal",
+        calories: Math.round(analysis.calories) || 0,
+        protein: Math.round(analysis.protein) || 0,
+        carbs: Math.round(analysis.carbs) || 0,
+        fats: Math.round(analysis.fat) || 0,
+        logged_at: new Date().toISOString(),
+      };
+
+      const { data, error } = await supabase
+        .from("meals")
+        .insert(mealData)
+        .select();
+
+      if (error) {
+        console.error("Save meal error:", error);
+        toast.error(`Failed to save meal: ${error.message || "Unknown error"}`);
+        return;
+      }
+
+      toast.success("Meal saved successfully!");
+      setMealDescription("");
+      setAnalysis(null);
+      fetchTodayMeals();
+    } catch (error: any) {
+      console.error("Unexpected error saving meal:", error);
+      toast.error(`Failed to save meal: ${error.message || "Please try again"}`);
+    }
   };
 
   const deleteMeal = async (mealId: string) => {
